@@ -1,2 +1,5 @@
-# fricitionless-data-sandbox
-A sandbox for FL data
+## Frictionless Data sandbox
+
+A sandbox for FrictionLess data https://frictionlessdata.io/
+
+
