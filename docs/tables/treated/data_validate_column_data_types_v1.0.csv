@@ -1,16 +1,15 @@
-﻿Column1,Column2,Column3
-Column Name,Data Type,data type to be confirmed
+﻿Column Name,Data Type,data type to be confirmed
 id,numeric,
 quality_grade,varchar,
 time_observed_at,date and time,
 taxon_geoprivacy,varchar,
-annotations,dictionary,?
+annotations,dictionary,
 uuid,varchar,
 cached_votes_total,numeric,
 identifications_most_agree,varchar,
 species_guess,varchar,
 identifications_most_disagree,varchar,
-tags,hashes/arrays,?
+tags,hashes/arrays,
 positional_accuracy,numeric,
 comments_count,numeric,
 site_id,numeric,
@@ -19,12 +18,12 @@ quality_metrics,dictionary,
 public_positional_accuracy,numeric,
 reviewed_by,hashes/arrays,
 oauth_application_id,numeric,
-flags,numeric,?
+flags,numeric,? Likely not a numeric but dict or hashes/arrays
 created_at,date and time,
 description,varchar,
-project_ids_with_curator_id,hashes/arrays,?
+project_ids_with_curator_id,hashes/arrays,
 updated_at,date and time,
-sounds,hashes/arrays,?
+sounds,hashes/arrays,"? No clue, to be checked on larger df."
 place_ids,hashes/arrays,
 captive,varchar,
 ident_taxon_ids,hashes/arrays,
@@ -35,15 +34,15 @@ num_identification_agreements,numeric,
 comments,dictionary,
 map_scale,numeric,
 uri,URL,
-project_ids,dictionary,?
+project_ids,dictionary,"No , it is  hashes/arrays see [137661]"
 community_taxon_id,numeric,
 owners_identification_from_vision,varchar,
 identifications_count,numeric,
 obscured,varchar,
 num_identification_disagreements,numeric,
-geoprivacy,varchar,?
+geoprivacy,varchar,"? No clue, to be checked on larger df."
 location,hashes/arrays,
-votes,dictionary,?
+votes,dictionary,
 spam,varchar,
 mappable,varchar,
 identifications_some_agree,varchar,
@@ -52,13 +51,13 @@ place_guess,varchar,
 identifications,dictionary,
 project_observations,dictionary,
 photo,dictionary,
-faves,numeric,?
+faves,numeric,"Dict. See [{'vote_flag': True, 'user_id': 1378031, 'created_at': '2022-04-06T08:46:00.700Z', 'id': 3738373, 'vote_scope': None, 'user': {'id': 1378031, 'login': 'pmallard', 'spam': False, 'suspended': False, 'created_at': '2018-12-03T22:58:54+00:00', 'login_autocomplete': 'pmallard', 'login_exact': 'pmallard', 'name': None, 'name_autocomplete': None, 'orcid': None, 'icon': 'https://static.inaturalist.org/attachments/users/icons/1378031/thumb.jpeg?1641234782', 'observations_count': 112, 'identifications_count': 106, 'journal_posts_count': 0, 'activity_count': 218, 'species_count': 101, 'universal_search_rank': 112, 'roles': [], 'site_id': 1, 'icon_url': 'https://static.inaturalist.org/attachments/users/icons/1378031/medium.jpeg?1641234782'}}]"
 non_owner_ids,dictionary,
 observed_on,date and time,
 photo_url,URL,
 taxon.is_active,varchar,
-taxon.ancestry,hashes/arrays,?
-taxon.min_species_ancestry,hashes/arrays,?
+taxon.ancestry,hashes/arrays,
+taxon.min_species_ancestry,hashes/arrays,"Comma separated value. Not in an array. Can you specify such data type in FrictionLess See 48460,47126,211194,47125,47124,51820,51821,779191,1244656,1244731,51822,792725,792732,337712"
 taxon.endemic,varchar,
 taxon.iconic_taxon_id,numeric,
 taxon.min_species_taxon_id,numeric,
@@ -108,7 +107,7 @@ user.login_autocomplete,varchar,
 user.login_exact,varchar,
 user.name,varchar,
 user.name_autocomplete,varchar,
-user.orcid,varchar,?
+user.orcid,varchar,? I would say so.
 user.icon,URL,
 user.observations_count,numeric,
 user.identifications_count,numeric,
@@ -116,7 +115,7 @@ user.journal_posts_count,numeric,
 user.activity_count,numeric,
 user.species_count,numeric,
 user.universal_search_rank,numeric,
-user.roles,varchar,?
+user.roles,varchar,? Likely not a varchar but dict or hashes/arrays. To be checked
 user.icon_url,URL,
 taxon.default_photo,numeric,
 taxon.conservation_status.place_id,numeric,?
@@ -147,7 +146,7 @@ matched_name,varchar,
 nomenclature_code,varchar,
 score,numeric,
 search_string,varchar,
-taxon.flags,hashes/arrays,?
+taxon.flags,hashes/arrays,"?. Apparently, see ['incertae_sedis']"
 taxon.is_suppressed,varchar,
 taxon.is_suppressed_from_synth,varchar,
 taxon.ott_id,numeric,
